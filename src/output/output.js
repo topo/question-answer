@@ -1,15 +1,14 @@
-const { Component, useState } = wp.element;
 
 const Output = ({
   classname,
   attributes
 }) => (
-  <div className={"wp-block-topo-question-answer " + open}>
-    <div className="wp-block-topo-question" onclick="topoToggleQuestionAnswer">
+  <div className="wp-block-topo-question-answer">
+    <div className="wp-block-topo-question" >
       <p className="question" dangerouslySetInnerHTML={{ __html: attributes.question }}></p>
       <span className="arrow"></span>
     </div>
-    <p className="wp-block-topo-answer" dangerouslySetInnerHTML={{ __html: attributes.answer }}></p>
+    <div className="wp-block-topo-answer"><p className="answer" dangerouslySetInnerHTML={{ __html: attributes.answer }}></p></div>
   </div>
 );
 

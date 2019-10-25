@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:     Question Answer Block
- * Plugin URI:      PLUGIN SITE HERE
- * Description:     PLUGIN DESCRIPTION HERE
+ * Plugin URI:      https://github.com/topo/question-answer
+ * Description:     A fully open source Gutenberg block for Q&As
  * Author:          topolitique.ch
  * Author URI:      https://topolitique.ch
  * Text Domain:     topo-question-answer

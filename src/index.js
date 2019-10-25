@@ -36,7 +36,7 @@ export default registerBlockType( 'news-blocks/interview', {
     },
 		answer: {
 			source: 'html',
-      selector: '.wp-block-topo-answer'
+      selector: '.wp-block-topo-answer .answer'
     },
 	},
 	edit: props => <Editor {...props} />,

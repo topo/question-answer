@@ -1,5 +1,4 @@
 import { TextControl, Button } from '@wordpress/components';
-const { Component, useState } = wp.element;
 const { RichText } = wp.editor;
 
 const Editor = ({
@@ -8,8 +7,6 @@ const Editor = ({
   isSelected,
   setAttributes,
 }) => {
-  const [question, setQuestion] = useState('o')
-
   return (
     <div className={classname}>
       <h2>{isSelected ? '🧐 Question' : '🧐 ' + attributes.question }</h2>

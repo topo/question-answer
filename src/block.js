@@ -13,6 +13,7 @@ for(i=0; i < questions.length; i++) {
 }
 
 function topoToggleQuestionAnswer(event) {
+  console.log('clicked', event.target);
   let element = event.target;
   if (!element.classList.contains('wp-block-topo-question')) {
     element = element.parentElement;

@@ -3,9 +3,15 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-$backgroundQuestion: rgb(225,225,225);
+$backgroundQuestion: rgb(245,245,245);
+$backgroundQuestionHover: rgb(235,235,235);
 $borderQuestion: rgb(200,200,200);
 
+
+.wp-block-topo-question-answer {
+	overflow: hidden;
+	padding-bottom: 12pt;
+}
 .wp-block-topo-question {
 	background: $backgroundQuestion;
 	display: block;
@@ -20,11 +26,17 @@ $borderQuestion: rgb(200,200,200);
 	justify-content: space-between;
 	align-items: center;
 	padding: 6pt;
+
+	transition: background-color .2s;
+}
+.wp-block-topo-question:hover {
+	background: $backgroundQuestionHover;
 }
 .wp-block-topo-question .question {
 	user-select: none;
 	font-size: 1.2rem;
 	padding: 0;
+	padding-right: 12pt;
 	margin: 0;
 	flex:1;
 }
@@ -47,13 +59,15 @@ $borderQuestion: rgb(200,200,200);
 .wp-block-topo-answer {
 	height: 0;
 	opacity: 0;
-	transition: opacity .8s, height .4s .3s;
+	transition: opacity .4s;
+	padding: 0;
 }
 
 
 .wp-block-topo-question-answer.open .wp-block-topo-answer {
 	height: auto;
 	opacity: 1;
+
 }
 .wp-block-topo-question-answer.open .arrow {
 	transform: rotate(180deg);
