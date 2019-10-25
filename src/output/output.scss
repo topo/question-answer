@@ -1,0 +1,60 @@
+/**
+ * The following styles get applied both on the front of your site and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+$backgroundQuestion: rgb(225,225,225);
+$borderQuestion: rgb(200,200,200);
+
+.wp-block-topo-question {
+	background: $backgroundQuestion;
+	display: block;
+	cursor: pointer;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: $borderQuestion;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 6pt;
+}
+.wp-block-topo-question .question {
+	user-select: none;
+	font-size: 1.2rem;
+	padding: 0;
+	margin: 0;
+	flex:1;
+}
+.wp-block-topo-question .question * {
+	user-select: none;
+	pointer-events: none;
+}
+.wp-block-topo-question .arrow {
+	height: 20pt;
+	width: 20pt;
+	background-image: url('arrow.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	fill: rgb(90, 50, 40);
+	border-radius: 50%;
+	transform: 0;
+	transition: transform .8s;
+}
+.wp-block-topo-answer {
+	height: 0;
+	opacity: 0;
+	transition: opacity .8s, height .4s .3s;
+}
+
+
+.wp-block-topo-question-answer.open .wp-block-topo-answer {
+	height: auto;
+	opacity: 1;
+}
+.wp-block-topo-question-answer.open .arrow {
+	transform: rotate(180deg);
+}

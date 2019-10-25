@@ -1,0 +1,32 @@
+{
+  "name": "interview-questions",
+  "version": "0.1.0",
+  "main": "Gruntfile.js",
+  "author": "Mark Spurgeon",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@wordpress/scripts": "^5.1.0",
+    "css-loader": "^3.2.0",
+    "grunt": "~0.4.5",
+    "grunt-wp-i18n": "~0.5.0",
+    "grunt-wp-readme-to-markdown": "~1.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "resolve-url-loader": "^3.1.0",
+    "responsive-loader": "^1.2.0",
+    "sass": "^1.23.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "url-loader": "^2.2.0",
+    "webpack": "^4.41.2"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@wordpress/components": "^8.3.2",
+    "@wordpress/compose": "^3.7.2"
+  }
+}
