@@ -12,6 +12,28 @@
  * @package         Topo_Question_Answer
  */
 
+function question_answer_block_assets() {
+	/**
+   * Output scripts & styles
+   *  
+   * */
+	wp_enqueue_style(
+		'question-answer-block-style',
+		plugins_url( 'block/index.css', __FILE__ ),
+		array()
+	);
+
+	wp_enqueue_script(
+    'question-answer-block-script',
+		plugins_url( 'block/block.js', __FILE__ ),
+		array(),
+		null,
+		true
+  );
+}
+add_action('enqueue_block_assets', 'question_answer_block_assets');
+
+
 // Your code starts here.
 function question_answer_block_init() {
 	// Skip block registration if Gutenberg is not enabled/merged.
@@ -41,23 +63,6 @@ function question_answer_block_init() {
 		array()
 	);
 
-  /**
-   * Output scripts & styles
-   *  
-   * */
-	wp_enqueue_style(
-		'question-answer-block-style',
-		plugins_url( 'block/index.css', __FILE__ ),
-		array()
-	);
-
-	wp_enqueue_script(
-    'question-answer-block-script',
-		plugins_url( 'block/block.js', __FILE__ ),
-		array(),
-		null,
-		true
-  );
 
 	register_block_type( 'topo/question-answer', array(
 		'editor_script' => 'question-answer-block-editor',
@@ -66,4 +71,3 @@ function question_answer_block_init() {
 	) );
 }
 add_action( 'init', 'question_answer_block_init' );
-add_action('enqueue_block_assets', 'question_answer_block_init');

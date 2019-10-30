@@ -19,7 +19,7 @@ const { Component } = wp.element;
 /**
  * Register block
  */
-export default registerBlockType( 'news-blocks/interview', {
+export default registerBlockType( 'topo/question-answer', {
 	title: __( 'Question & Answer' ),
 	description: __( 'Show a question. Click on it. Show the answer' ),
 	category: 'common',
